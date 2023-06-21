@@ -2,12 +2,13 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Mi sitio de criptomonedas</title>
+    <title>Cripto News</title>
+    <script src="custom.js" defer></script>
     <link rel="stylesheet" href="estilos.css" />
   </head>
   <body>
     <header>
-      <h1>Mi sitio de criptomonedas</h1>
+      <h1>Mi sitio de criptomonedasssss</h1>
     </header>
     <nav>
       <ul>
@@ -16,10 +17,41 @@
         <li><a href="#">Criptomonedas</a></li>
         <li><a href="#">Cursos</a></li>
         <li><a href="#">Contacto</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
     </nav>
     <main>
+      <section class="main-section">
+        <h2>Cotizador de Criptomonedas</h2>
+        <div class="container">
+          <div class="image-side"></div>
+          <div class="form-side">
+            <form action="" id="form-search">
+              <select id="moneda" name="moneda">
+                <option value="">Elige tu moneda</option>
+                <option value="USD">Dolar Estadounidense</option>
+                <option value="MXN">Peso Mexicano</option>
+                <option value="GBP">Libras</option>
+                <option value="EUR">Euros</option>
+              </select>
+
+              <select id="criptomonedas" name="criptomoneda">
+                <option value="">Elige tu criptomoneda</option>
+              </select>
+
+              <input class="" type="submit" value="Cotizar" />
+              <div class="container-answer"></div>
+              <!-- <div class="display-info">
+                        <p class="main-price">Precio: <span>$433.33</span></p>
+                        <p>Precio más alto del día:: <span>$433.33</span></p>
+                        <p>Precio más bajo del día: <span>$433.33</span></p>
+                        <p>Variación últimas 24 horas: <span>$433.33</span></p>
+                        <p>Última Actualización: <span>$433.33</span></p>
+                    </div> -->
+            </form>
+          </div>
+        </div>
+      </section>
       <section>
         <article>
           <h2>Bitcoin</h2>

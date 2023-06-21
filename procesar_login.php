@@ -1,8 +1,15 @@
 <?php
+echo "helloooooooooo";
+display_errors = on;
+error_reporting(E_ALL);
+session_start();
+
 // Conectar a la base de datos
 $db = new PDO('sqlite:usuarios.db');
 // Verificar si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $variable = "inside login.php";
+  var_dump($variable);
   // Obtener los datos del formulario
   $usuario = $_POST['usuario'];
   $contrasena = $_POST['contrasena'];

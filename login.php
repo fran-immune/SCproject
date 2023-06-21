@@ -5,7 +5,7 @@
     <title>Iniciar sesión</title>
   </head>
   <body>
-    <h1>Iniciar sesión</h1>
+    <h2>Iniciar sesión</h2>
     <form action="procesar_login.php" method="post">
       <label for="usuario">Usuario:</label>
       <input type="text" id="usuario" name="usuario" required />
