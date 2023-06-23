@@ -1,13 +1,13 @@
 <?php
  phpinfo();
-echo "helloooooooooo";
+
 display_errors = on;
 error_reporting(E_ALL);
 session_start();
 
 // Conectar a la base de datos
-$db = new PDO('sqlite:/Users/fran/Desktop/cibersecurity/SCproject/usuarios.db');
-
+//$db = new PDO('sqlite:/Users/fran/Desktop/cibersecurity/SCproject/usuarios.db');
+$db = mysqli_connect("localhost","root","","registro"); 
    if(!$db) {
       echo $db->lastErrorMsg();
    } else {
@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $usuario = $_POST['usuario'];
   $contrasena = $_POST['contrasena'];
   // Verificar las credenciales del usuario en la base de datos
+
+  // declaracion preparada
   $stmt = $db->prepare('SELECT * FROM usuarios WHERE usuario = :usuario AND contrasena = :contrasena');
   $stmt->bindParam(':usuario', $usuario);
   $stmt->bindParam(':contrasena', $contrasena);
