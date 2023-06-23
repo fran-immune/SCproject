@@ -1,11 +1,19 @@
 <?php
+ phpinfo();
 echo "helloooooooooo";
 display_errors = on;
 error_reporting(E_ALL);
 session_start();
 
 // Conectar a la base de datos
-$db = new PDO('sqlite:usuarios.db');
+$db = new PDO('sqlite:/Users/fran/Desktop/cibersecurity/SCproject/usuarios.db');
+
+   if(!$db) {
+      echo $db->lastErrorMsg();
+   } else {
+      echo "Base de datos abierta correctamente\n";
+   }
+
 // Verificar si se envió el formulario
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $variable = "inside login.php";
@@ -27,4 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo 'Credenciales incorrectas';
   }
 }
+$db->close();
 ?>

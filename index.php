@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>Mi sitio de criptomonedasssss</h1>
+      <h1>Mi sitio de criptomonedass</h1>
     </header>
     <nav>
       <ul>
@@ -74,25 +74,29 @@
             internacionales de dinero y que se basa en la tecnología blockchain.
           </p>
         </article>
+        <article>
+          <h2>Eyes coin</h2>
+          <p>
+            Eyes es una criptomoneda que se utiliza para transferencias
+            internacionales de dinero y que se basa en la tecnología blockchain.
+          </p>
+        </article>
       </section>
       <aside>
-        <form action="procesar_formulario.php" method="post">
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Nombre completo"
-          />
-          <label for="email">Correo electrónico:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Correo electrónico"
-          />
-          <input type="submit" value="Suscribirse" />
-        </form>
+        <div>
+          <form  method="post">
+             <label for="name">Nombre:</label>
+            <input type="text" name="name" placeholder="Nombre completo" />
+             <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email" />
+
+            <input type="submit" value="Suscribirse" />
+          </form>
+          <?php 
+              include("registrar.php");
+          ?>
+        </div>
+
         <div class="buscador">
           <input type="text" placeholder="Buscar..." />
           <button>Buscar</button>
